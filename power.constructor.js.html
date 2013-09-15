@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+<script>
+var object = function(o) {
+	var Object = function () {};
+	Object.prototype = o;
+	return new Object();
+};
+
+var println = function(s){
+	this.document.body.innerHTML += s + "<br/>";
+}
+
+var powerConstructor = function() {
+    var that = object({});
+	var id = 12;
+	function privateFunction() {
+		return "secret";
+	};
+	
+    that.getId = function() {
+		return id + " " + privateFunction();
+	};
+	
+	that.setId = function(newId) {
+		id = newId;
+	};
+	return that;
+};
+
+var a = powerConstructor();
+println(a.getId());
+a.setId(66);
+println(a.getId());
+</script>
+</body>
+</html>

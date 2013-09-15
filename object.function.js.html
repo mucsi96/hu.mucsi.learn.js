@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script>
+var object = function(o) {
+	var Object = function () {};
+	Object.prototype = o;
+	return new Object();
+}
+var a = object({name:"A",size:5});
+var b = object(a);
+b.name = "B";
+this.document.body.innerHTML = b.name + b.size;
+</script>
+</body>
+</html>
