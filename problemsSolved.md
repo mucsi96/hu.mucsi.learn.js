@@ -9,6 +9,7 @@ require('grunt-cli/bin/grunt');
     * File Path: grunt_dir/run-test.js
     * Runtime: Default
     * Cmd Line Args: jasmine
+
 # Debugging grunt task in WebStorm #
 * I would show how could I debug "grunt jasmine" in WebStorm
 * Create a Node.js run config:
