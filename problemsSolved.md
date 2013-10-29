@@ -20,6 +20,7 @@ require('grunt-cli/bin/grunt');
 # Debugging jasmine tests in WebStorm (without grunt) #
 * Using npm install jasmine-node
 * Create file "run-tests.js" with the following content:
+
 ```
 #!javascript
 var fs = require('fs');
@@ -33,6 +34,7 @@ includeInThisContext(__dirname+"/modules/eventPublisher.js");
 
 require('jasmine-node/lib/jasmine-node/cli');
 ```
+
 * Configure the Run&Debug:
     * Working directory: ...this_dir
     * Path to Node App JS File: run-tests.js
